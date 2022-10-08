@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agenda Telefonica - Autentificare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda telefonica">
+  	<meta name="keywords" content="HTML, PHP, CSS">
+  	<meta name="author" content="Zane Livia, CR2.3B">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form class="login" action="login.php" method="post">
+    <header>
+      <h1 id=err></h1>
+      <label for="uname">Utilizator:</label>
+      <input type="text" name="uname" required autofocus><br><br>
+
+      <label for="psw">Parola:</label>
+      <input type="password" name="psw" required><br><br>
+
+	  <input type="checkbox" id="user_nou" name="user_nou" value=1>
+	  <label for="user_nou">Utilizator nou</label><br><br>
+      
+      <button type="submit">Login</button>
+      </header>
+    </form> 
+    <script>
+		if (window.location.search.substr(1) == "err") {
+			document.getElementById("err").innerHTML = "User inexistent sau parola gresita!";
+		}
+	</script>
+</body>
+</html>
